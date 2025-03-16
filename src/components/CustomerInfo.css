@@ -1,0 +1,53 @@
+.customer-info {
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    gap: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .date-group {
+    flex: 1 1 200px;
+  }
+  
+  .customer-name-group {
+    flex: 2 1 300px;
+  }
+  
+  .three-columns .form-group {
+    flex: 1 1 200px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .lab-instruction {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .lab-instruction p {
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+  
+  
