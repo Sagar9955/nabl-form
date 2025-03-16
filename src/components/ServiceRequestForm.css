@@ -11,21 +11,33 @@
     text-align: right;
   }
   
-  .submit-button {
-    background-color: #4a90e2;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  .submit-button:hover {
-    background-color: #3a7bc8;
-  }
-  
+  .submit-button,
+.download-button,
+.print-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Spacing between buttons */
+}
+
+.submit-button:hover,
+.download-button:hover,
+.print-button:hover {
+  background-color: #3a7bc8;
+}
+
+/* Container for buttons */
+.form-actions {
+  margin-top: 20px; /* Space between form fields and buttons */
+  display: flex;
+  justify-content: center; /* Center buttons */
+}
+
   input,
   select,
   textarea {

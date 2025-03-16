@@ -67,6 +67,27 @@ function ServiceRequestForm() {
     // Here you would typically send the data to a server
   }
 
+  const downloadJSON = () => {
+    const jsonData = JSON.stringify(formData, null, 2) // Convert form data to formatted JSON
+    const blob = new Blob([jsonData], { type: "application/json" }) // Create a Blob
+    const url = URL.createObjectURL(blob) // Create a URL for the blob
+
+    // Create a hidden <a> element to trigger the download
+    const link = document.createElement("a")
+    link.href = url
+    link.download = "ServiceRequestForm.json"
+    document.body.appendChild(link)
+    link.click()
+
+    // Clean up
+    document.body.removeChild(link)
+    URL.revokeObjectURL(url)
+  }
+
+  const printPage = () => {
+    window.print() // Triggers the print dialog
+  }
+
   return (
     <div className="service-request-form">
       <form onSubmit={handleSubmit}>
@@ -78,9 +99,15 @@ function ServiceRequestForm() {
 
         <FormFooter formData={formData} handleInputChange={handleInputChange} />
 
-        <div className="form-submit">
+        <div className="form-actions">
           <button type="submit" className="submit-button">
             Submit
+          </button>
+          <button type="button" className="download-button" onClick={downloadJSON}>
+            Download JSON
+          </button>
+          <button type="button" className="print-button" onClick={printPage}>
+            Print
           </button>
         </div>
       </form>
@@ -89,4 +116,3 @@ function ServiceRequestForm() {
 }
 
 export default ServiceRequestForm
-
